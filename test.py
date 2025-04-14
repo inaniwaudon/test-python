@@ -2,7 +2,9 @@ import requests
 
 def fetch_example_data():
     try:
-        response = requests.get('https://example.com')
+        response = (
+            requests.get('https://example.com')
+        )
         response.raise_for_status()  # HTTPエラーが発生した場合に例外を発生させる
         return response.text
     except requests.RequestException as e:
